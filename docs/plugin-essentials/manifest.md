@@ -47,13 +47,17 @@ The `plugin.json` file is a crucial component of every Acode plugin, serving as 
    - Details about the plugin author, including name, email, URL, and GitHub username.
 
 ## 11. **license:** <Badge type="tip" text="new" />
-    - Name of the license under which the plugin is released.
+   - Name of the license under which the plugin is released.
 
 ## 12. **keywords:** <Badge type="tip" text="new" />
   - An array of strings providing searchable terms related to the plugin.
 
-## 13. **changelog:** <Badge type="tip" text="new" />
+## 13. **changelogs:** <Badge type="tip" text="new" />
   - Path to the changelog file documenting version updates and modifications.
+
+   ::: warning
+   Make sure to include `changelogs.md` or whatever you named it, in the plugin zip.
+   :::
 
 ## 14. **contributors:** <Badge type="tip" text="new" />
   - An array of objects containing details about project contributors.
@@ -90,6 +94,9 @@ If you wish to publish an update for your plugin, follow these guidelines:
   "files": ["worker.js"],
   "minVersionCode": 292,
   "price": 0,
+  "license": "MIT",
+  "keywords": ["foo","bar"],
+  "changelogs": "changelogs.md",
   "author": {
     "name": "Example Author",
     "email": "example@email.com",
@@ -100,4 +107,4 @@ If you wish to publish an update for your plugin, follow these guidelines:
 ```
 :::
 
-This example illustrates a basic `plugin.json` file. Happy coding! 🚀✨
+This example illustrates a basic `plugin.json` file.
