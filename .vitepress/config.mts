@@ -5,7 +5,7 @@ export default defineConfig({
   lang: "en-US",
   title: "Acode Docs",
   description:
-    "Community driven detailed acode and its plugin development guide",
+    "Detailed Acode and its plugin development guide",
   lastUpdated: true,
   cleanUrls: true,
   head: [["link", { rel: "icon", href: "/acode.png" }]],
@@ -284,13 +284,13 @@ export default defineConfig({
     socialLinks: [
       {
         icon: "github",
-        link: "https://github.com/bajrangCoder/acode-plugin-docs",
+        link: "https://github.com/Acode-Foundation/acode-plugin-docs",
       },
       { icon: "discord", link: "https://discord.com/invite/y4MjDXvMXW" },
     ],
     editLink: {
       pattern:
-        "https://github.com/bajrangcoder/acode-plugin-docs/edit/main/:path",
+        "https://github.com/Acode-Foundation/acode-plugin-docs/edit/main/:path",
       text: "Edit this page on GitHub",
     },
   },
