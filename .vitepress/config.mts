@@ -8,6 +8,7 @@ export default defineConfig({
     "Detailed Acode and its plugin development guide",
   lastUpdated: true,
   cleanUrls: true,
+  base: "/acode-plugin-docs/",
   head: [["link", { rel: "icon", href: "/acode.png" }]],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
