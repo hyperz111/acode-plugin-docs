@@ -7,7 +7,7 @@ The `editorManager` allows to interact with the Editor Instance and listen to va
 ## Methods and Properties
 
 ### `editor`  
-This is an instance of the Ace editor. Check out editor methods [here](https://ajaxorg.github.io/ace-api-docs/interfaces/ace.Ace.Editor.html)
+This is an instance of the Ace editor. Check out editor methods [here](https://ajaxorg.github.io/ace-api-docs/classes/ace.Editor-1.html)
 
 - `addCommand(args: string | object)` This method allows you add a command to command palette of Acode app. You can use it like:
 ```javascript
