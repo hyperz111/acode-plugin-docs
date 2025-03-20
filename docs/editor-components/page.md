@@ -42,7 +42,6 @@ const myPage = page('My Plugin Page', {
 | `on(event, callback)` | Adds an event listener to the page |
 | `off(event, callback)` | Removes an event listener from the page |
 | `setTitle(title)` | Updates the page title |
-| `show()` | Makes the page visible |
 | `hide()` | Hides the page |
 
 ## Properties
@@ -54,6 +53,10 @@ const myPage = page('My Plugin Page', {
 | `innerHTML` | string | The page's inner HTML content |
 | `textContent` | string | The page's text content |
 | `lead` | HTMLElement | The lead element if defined |
+
+:::info
+You'll need to implement `show` method according to your situation at your own.
+:::
 
 ## Example
 
@@ -69,7 +72,7 @@ function createSettingsPage() {
 
 		const saveButton = tag('span', {
 				className: 'icon save',
-				onclick: saveSettings
+				onclick: () => {console.log("save settings")}
 		});
 
 		// Initialize page
@@ -87,6 +90,15 @@ function createSettingsPage() {
 
 		form.append(input);
 		settingsPage.appendBody(form);
+                settingsPage.show = () => {
+			// to have proper behaviour for mobile back button press, check actionStack doc for more
+                        const actionStack = acode.require("actionStack");
+			actionStack.push({
+        			id: "some_id",
+        			action: settingsPage.hide,
+      			});
+			app.append(settingsPage);
+    		};
 
 		// Show the page
 		settingsPage.show();
