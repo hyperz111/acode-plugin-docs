@@ -67,11 +67,17 @@ function createSettingsPage() {
 		// Create page elements
 		const backButton = tag('span', {
 				className: 'icon back',
+				dataset: {
+        				action: "back-btn"
+      				}
 				onclick: () => settingsPage.hide()
 		});
 
 		const saveButton = tag('span', {
 				className: 'icon save',
+				dataset: {
+        				action: "save-btn"
+      				}
 				onclick: () => {console.log("save settings")}
 		});
 
