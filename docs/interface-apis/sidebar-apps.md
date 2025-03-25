@@ -12,7 +12,7 @@ const sideBarApps = acode.require('sidebarApps');
 
 ## Methods
 
-### `addApp(icon: string, id: string, title: string, initFunction: (container: HTMLElement)=>void, prepend: boolean, onSelected: (container: HTMLElement)=>void ): void`
+### `add(icon: string, id: string, title: string, initFunction: (container: HTMLElement)=>void, prepend: boolean, onSelected: (container: HTMLElement)=>void ): void`
 
 Adds a new app to the sidebar.
 
@@ -26,7 +26,7 @@ Parameters:
 
 Example:
 ```javascript
-sideBarApps.addApp(
+sideBarApps.add(
   'icon_class', // Icon for the app
   'my_app_id',  // Unique ID
   'My App',     // Display title
