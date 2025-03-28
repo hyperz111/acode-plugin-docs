@@ -24,21 +24,16 @@ Acode plugins follow a specific structure within a zip file. The necessary compo
 3. **readme.md:**
    - Contains the description or about plugin
 
+3. **changelogs.md:**
+   - contains changelogs of your plugin updates.
+
 ## Plugin Templates
 
 To make your journey smoother, we provide comprehensive plugin templates, which are preconfigured and catering to various use cases:
 
-1. **[JavaScript Template](https://github.com/deadlyjack/acode-plugin)** <Badge type="tip" text="official" /> : Javascript based template for plugin development and comes preconfigured
+1. **[JavaScript Template](https://github.com/Acode-Foundation/acode-plugin)** <Badge type="tip" text="official" /> : Javascript based template for plugin development and comes preconfigured
 
-2. **[TypeScript Template](https://github.com/bajrangCoder/AcodeTSTemplate)** <Badge type="warning" text="community" /> : Typescript template for plugin development and comes with type checking and all typescript feature
-
-3. **[Mobile Template](https://github.com/bajrangCoder/acode-plugin-template)** <Badge type="warning" text="community" /> : Fork of official JavaScript Template with some tweaks and additional configuration to work on **Termux**
-
-:::tip
-
-[acode-cli](https://github.com/coswat/acode-cli) : A community driven cli tool to develop acode plugins easily. Its fast and easy to use and written in **rust**
-
-:::
+2. **[TypeScript Template](https://github.com/Acode-Foundation/AcodeTSTemplate)** <Badge type="tip" text="official" /> : Typescript template for plugin development and comes with type checking and all typescript feature
 
 ## Getting Started
 
@@ -79,23 +74,23 @@ To make your journey smoother, we provide comprehensive plugin templates, which 
     
     ::: code-group
     ```sh [npm]
-    $ npm run start-dev
+    $ npm run dev
     ```
 
     ```sh [pnpm]
-    $ pnpm start-dev
+    $ pnpm dev
     ```
 
     ```sh [yarn]
-    $ yarn start-dev
+    $ yarn dev
     ```
 
     ```sh [bun]
-    $ bun run start-dev
+    $ bun run dev
     ```
     :::
 
-    - Or you can build every time manually on changes using :
+    - Or you can build every time manually on changes using(this will build production build):
 
     ::: code-group
     ```sh [npm]
@@ -118,11 +113,20 @@ To make your journey smoother, we provide comprehensive plugin templates, which 
 5.  **Install the Plugin:**
 
     - Use the **REMOTE** option in Acode's plugin manager.
+    - This option is available on both sidebar extension tab or on Plugin page from settings.
     - Provide the plugin URL (e.g., `http://\<ip\>:3000/dist.zip`) when prompted.
     - Or if you are building manually then you can use the **Local** option in Acode's plugin manager and select the plugin zip
 
 :::info
-Development server will only build the zip on file changes but for testing in Acode, You will need to install plugin in Acode on changes to see effect
+Development server will only build the zip on file changes
+:::
+
+:::tip 
+For local development, start a dev server using `npm run dev`. In Acode, use the **Remote** option, either from the **sidebar** or the **plugin page**. Enter the server URL, hit **Install**, and the plugin will be installed.  
+
+It's more convenient to manage this from the sidebar. When you install a local plugin(either using url or selecting the zip), Acode will add a **reload** icon in the **Extensions** tab of the sidebar. This is useful because the server automatically builds the plugin ZIP when changes are made. Simply press the reload button to apply the latest changes instantly.  
+
+This makes plugin development a much smoother experience—previously, it was quite frustrating, but this feature was recently added to improve the workflow.
 :::
 
 ## Building and Publishing
@@ -131,29 +135,29 @@ To share your plugin with the Acode community, follow these steps:
 
 1. **Bundle for production:**
 
-   - Use `build-release` command to create a production build. which will be lower in size
+   - Use `build` command to create a production build. which will be lower in size
 
    ::: code-group
 
     ```sh [npm]
-    $ npm run build-release
+    $ npm run build
     ```
 
     ```sh [pnpm]
-    $ pnpm build-release
+    $ pnpm build
     ```
 
     ```sh [yarn]
-    $ yarn build-release
+    $ yarn build
     ```
 
     ```sh [bun]
-    $ bun run build-release
+    $ bun run build
     ```
 
 2. **Publish:**
 
-   - Publish your release build on [Acode's](https://acode.foxdebug.com) official website, making your plugin accessible to the broader community.
+   - Publish your release build on [Acode's](https://acode.app) official website, making your plugin accessible to the broader community.
 
    - Tutorial for publishing a plugin : [Youtube](https://youtube.com/shorts/cxF2pxyN1HM?si=kQ5_BRtIO2RU-zhb)
 
