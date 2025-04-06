@@ -3,7 +3,7 @@ layout: home
 
 hero:
   name: "Acode Docs"
-  text: "Community driven detailed Acode and its plugin development guide"
+  text: "Your guide for every step of your Acode journey."
   tagline: Build and Extend with Ease
   image:
     src: /acode.png
