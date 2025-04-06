@@ -5,7 +5,7 @@ export default defineConfig({
   lang: "en-US",
   title: "Acode Docs",
   description:
-    "Detailed Acode and its plugin development guide",
+    "Documentation for new users and developers",
   lastUpdated: true,
   cleanUrls: true,
   base: "/",
@@ -21,7 +21,7 @@ export default defineConfig({
     footer: {
       message: "Released under the MIT License.",
       copyright:
-        'Copyright © 2024-present <a class="link" href="//acode.app">Acode</a>',
+        'Copyright © 2025 <a class="link" href="//acode.app">Acode</a>',
     },
     sidebar: {
       "/docs/": [
@@ -287,7 +287,7 @@ export default defineConfig({
         icon: "github",
         link: "https://github.com/Acode-Foundation/acode-plugin-docs",
       },
-      { icon: "discord", link: "https://discord.com/invite/y4MjDXvMXW" },
+      { icon: "discord", link: "https://discord.gg/nDqZsh7Rqz" },
     ],
     editLink: {
       pattern:
