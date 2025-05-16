@@ -30,19 +30,19 @@ Creates a new keyboard event with the specified type and options.
 #### Parameters
 
 - `type` (*string*) - The type of keyboard event to create. Can be either:
-		- `'keydown'` - Key pressed down
-		- `'keyup'` - Key released
+	- `'keydown'` - Key pressed down
+	- `'keyup'` - Key released
 
 - `options` (*object*) - Configuration options for the keyboard event:
-		- `key` (*string*) - The key value (e.g. 'Enter', 'a', 'ArrowLeft')
-		- `keyCode` (*number*) - The key code (optional if key is specified)
-		- `which` (*number*) - The which code (optional if key is specified)
-		- `ctrlKey` (*boolean*) - Whether Ctrl key is pressed
-		- `shiftKey` (*boolean*) - Whether Shift key is pressed
-		- `altKey` (*boolean*) - Whether Alt key is pressed
-		- `metaKey` (*boolean*) - Whether Meta/Command key is pressed
-		- `bubbles` (*boolean*) - Whether event bubbles up through DOM
-		- `cancelable` (*boolean*) - Whether event can be canceled
+	- `key` (*string*) - The key value (e.g. 'Enter', 'a', 'ArrowLeft')
+	- `keyCode` (*number*) - The key code (optional if key is specified)
+	- `which` (*number*) - The which code (optional if key is specified)
+	- `ctrlKey` (*boolean*) - Whether Ctrl key is pressed
+	- `shiftKey` (*boolean*) - Whether Shift key is pressed
+	- `altKey` (*boolean*) - Whether Alt key is pressed
+	- `metaKey` (*boolean*) - Whether Meta/Command key is pressed
+	- `bubbles` (*boolean*) - Whether event bubbles up through DOM
+	- `cancelable` (*boolean*) - Whether event can be canceled
 
 #### Returns
 
