@@ -66,6 +66,8 @@ The `plugin.json` file is a crucial component of every Acode plugin, serving as 
     - `role`: Their role in the project
     - `github`: Their GitHub username
 
+## 15. **repository:** <Badge type="tip" text="new" />
+  - Github/Gitlab url of your plugin source(only for free plugins)
 
 # Updating Plugins:
 
