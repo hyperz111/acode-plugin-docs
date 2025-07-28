@@ -67,3 +67,42 @@ Example:
 ```javascript
 sideBarApps.remove('my_app_id');
 ```
+
+## Troubleshooting
+
+### Scrolling Issues
+
+If you encounter scrolling issues in your sidebar app, you need to add the `scroll` class to the element that should be scrollable and apply these essential CSS properties:
+
+- `max-height`: Sets height constraints for the scrollable area
+- `overflow-y: auto`: Enables vertical scrolling when content overflows
+
+Note: The `scroll` class alone doesn't contain these properties, so you must apply them manually.
+
+Example:
+```javascript
+sideBarApps.add(
+  'icon_class',
+  'scrollable_app',
+  'Scrollable App',
+  (container) => {
+    const content = document.createElement('div');
+    content.className = 'scroll'; // Add the scroll class
+    content.style.maxHeight = '300px'; // Set max height
+    content.style.overflowY = 'auto'; // Enable vertical scrolling
+    content.innerHTML = `
+      <div>Item 1</div>
+      <div>Item 2</div>
+      <div>Item 3</div>
+      <!-- More items that might overflow -->
+    `;
+    container.appendChild(content);
+  },
+  false,
+  (container) => {
+    console.log('Scrollable app selected');
+  }
+);
+```
+
+Both the `scroll` class and these CSS properties are required for proper scrolling functionality in sidebar apps.
