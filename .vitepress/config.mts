@@ -253,6 +253,10 @@ export default defineConfig({
 							collapsed: true,
 							items: [
 								{
+									text: "Terminal",
+									link: "/docs/advanced-apis/terminal",
+								},
+								{
 									text: "Action Stack",
 									link: "/docs/advanced-apis/action-stack",
 								},
